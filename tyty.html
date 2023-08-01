@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electronic Library</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Electronic Library</h1>
+    </header>
+    
+    <main>
+        <div class="book">
+            <img src="book1.jpg" alt="Book 1">
+            <h2>Book 1</h2>
+            <p>Description of Book 1...</p>
+            <a href="#">Read More</a>
+        </div>
+        
+        <div class="book">
+            <img src="book2.jpg" alt="Book 2">
+            <h2>Book 2</h2>
+            <p>Description of Book 2...</p>
+            <a href="#">Read More</a>
+        </div>
+        
+        <div class="book">
+            <img src="book3.jpg" alt="Book 3">
+            <h2>Book 3</h2>
+            <p>Description of Book 3...</p>
+            <a href="#">Read More</a>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2021 Electronic Library. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+```
+
+CSS code (style.css):
+<style>body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.book {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.book img {
+    width: 130px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.book h2 {
+    margin: 0;
+}
+
+.book p {
+    margin: 10px 0;
+}
+
+.book a {
+    display: block;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+</style>
+```css
