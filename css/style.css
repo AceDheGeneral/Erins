@@ -11,16 +11,65 @@ html, body{
   line-height: 1.5;
 }
 
+.flex-item{
+  display: flex;
+  align-items: center;
+}
+
+.flex-wrap{
+  display: flex;
+  flex: flex-wrap;
+}
+
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+li {
+  list-style: none;
+}
+
+a{text-decoration: none;}
+
+button {
+  background: none;
+  font: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+
 /*
 ==== HEADER && NAVBAR ===== 
 */
+
 .header {
+  background-color: none !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.30);
+}
+
+.banner{
+  background: url(../images/icon/life.jpg);
+  height: 70vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header-wrapper{
   display: flex;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  background-color: #f1f1f1;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.30); 
   padding: 0 3rem;
 }
 
@@ -59,12 +108,17 @@ ul.navigation {
   box-shadow: none;
 }
   
-li a {
+ul.navigation li a {
   display: block;
   color: white;
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
+}
+
+.header-wrapper .ls{
+  display: flex;
+  justify-content: center;
 }
 
 
@@ -103,6 +157,22 @@ li a {
   transition: all .5s;}
   
 
+.breadcrumbs{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.breadcrumbs li a::before{
+  content: '/';
+}
+
+.breadcrumbs li a{
+  font-size: 1.8em;
+  text-transform: capitalize;
+}
+
 /*
 *===== MAIN ====== 
 */
@@ -120,7 +190,6 @@ main {
 
 .books-wrapper {
   display: flex;
-  flex-wrap: wrap;
   gap: 2em;
   justify-content: center;
 }
@@ -175,31 +244,90 @@ main {
 }
     
 
-footer{
-  color: rgba(195, 8, 161);
-  position:relative;
-  width: 100%;
-  background-color:#2344;
-  filter: drop-shadow(0 10px 5px rgb(91, 91, 92));
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.30); 
-  border-color:red;
-  margin:0.2cm;
-  opacity: 0.9;
-  text-decoration-color: #111;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-weight: 500;
-  text-align: center;
+/* ------- Intro  ----------*/
+
+.intro {
+  margin-top: 4rem;
+  min-height: 40vh;
+  background-color: beige;
+  padding: 4rem 0;
 }
 
-footer button{
-  background:#ffff;
-  color:blueviolet;
-  font-weight:bolder;
-  font-family:system-ui;
-  box-shadow:#fff;
-  width:3cm;
-  height:1cm;
-  border-color:#fff;
+.intro-wrapper{
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.intro-wrapper .intro-text{
+  flex: 1;
+  font-size: 1.3em;
+}
+
+.intro-wrapper .intro-image{
+  flex: 1;
+  height: 40vh;
+}
+
+
+/* --------  books ----------*/
+
+.books{
+  margin-top: 4rem;
+}
+
+
+/* --------  Footer ---------*/
+
+footer {
+  margin-top: 3rem;
+  padding: 5em 0 ;
+  justify-content: center;
+  text-align: center;
+  display: block;
+  min-height: 22vh;
+}
+
+footer .footer-wrapper{
+  gap: 4em;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 4em;
+}
+
+footer .footer-wrapper ul{
+  height: 100px;
+  text-align: left;
+  padding: 0 2em;
+}
+
+footer .footer-wrapper ul li:not(.head){
+  font-size: var(--font-smaller);
+  padding: 2px 0;
+}
+
+footer .footer-wrapper ul li:not(.head):hover {
+  color: var(--secondary-dark-color);
+  text-decoration: underline;
+  transform: translateX(1em);
+  transition: all .2s ;
+}
+
+footer .footer-wrapper ul.icons li {
+  align-items: center;
+}
+
+footer .footer-wrapper ul.icons i {
+  padding: 0 2px;
+}
+
+footer .copyright {
+  font-size: var(--font-small);
+  margin-top: 5em;
+}
+
+footer .copyright i {
+  color: var(--secondary-dark-color);
 }
     
 
